@@ -1,5 +1,5 @@
 # Health Patient Analysis | Revenue, Trends and Insights
-Excel. SQL. Power BI Project | Health Analysis ->> Transitioning from raw data transformed into detailed insight
+Excel & SQL Project | Health Analysis ->> Transitioning from raw data transformed into detailed insight
 
 ### Table of contents
 - [Project Overview](#project-overview)
@@ -7,30 +7,35 @@ Excel. SQL. Power BI Project | Health Analysis ->> Transitioning from raw data t
 - [Dataset Overview](#dataset-overview)
 - [Data Cleaning Process](#data-cleaning-process)
 - [Exploratory Analysis](#exploratory-analysis)
-- [Power BI Dashboard](#power-bi-dashboard)
+- [Excel Dashboard](#excel-dashboard)
 - [Key Insight](#key-insights)
 - [Recommendations](#recommendations)
 
 ### Project overview
 This project analyse Healthcare data to uncover trends in patient's records, revenue generated, hospital department's performance, and patients recovery score
-Using Excel for transformation, SQL for data exploration and Power BI for visualization, the project turns raw record into actionable insights.
+Using SQL for data exploration and Excel for transformation and visualization, the project turns raw record into actionable insights.
 
 ### Tools and Technologies
 * SQL
 * Excel
-* Power BI
 
 ### Dataset Overview
 Colummns:
-Transaction, Date,	Age, Location, Product ID, Product Name,	Category, Quantity,	Shipping Method,	Event,	Customer Satisfaction,	Unit Price, Total Price
+Patient_Id,	Date,	Month,	Age_Group,	Gender,	Region,	Department,	Treatment_Type,	Visit_Type,	Length_Of_Stay_Days, Treatment_Cost, Recovery_Score,	Readmission_Risk
+
+<img width="32766" height="21" alt="image" src="https://github.com/user-attachments/assets/2d445b77-9892-42bf-86d7-389a2da6afc9" />
+
 
 ### Sample Preview     
 
 |	Patient_Id	| Date |	Age_Group	| Gender	| Region	| Department	| Treatment_Type |	Visit_Type | Length_Of_Stay_Days	| Treatment_Cost |	Recovery_Score |	Readmission_Risk |
 |---------|------|-------------|----------|----------|----------|------------------|---------|-----------------------|------------|--------------|-------------|
-|11/01/2018|	58|	Prince Edward Island|	Toys_Product|	Toys	|4|	Standard|	None|	1	|48|	$194	|																
-|23/11/2022 |	26	|Nunavut|	Electronics_Product	|Electronics	|4|	Overnight|	Black Friday|	4|	77|	$309|																	
-|11/01/2018|	20	|New Brunswick|	Decorations_Product|	Decorations|	5	|Express|	Christmas Market|	3	|25|	$126|		
+| 1 | 1/1/2022 |  31-45 | Male | West |	General Medicine |	Medication | Emergency | 5.8 |	$59,151 |59 | 0.12
+| 2 | 1/1/2022 | 60+	| Female |	West |	Orthopedics | Surgery	| Routine |	5.1	| $30,272 |	97 | 0.11
+| 3 | 1/1/2022 | 46-60 | Male |	South |	Pediatrics | Observation | Routine |	7.9	| $67,498 |	60	| 0.19
+| 4 | 1/1/2022 | 31-45 | Female | North | Neurology	| Medication | Routine | 5	| $29,896 |	51	| 0.47
+| 5 | 1/1/2022 | 18-30 | Female | North | Neurology | Therapy | Routine	| 0	| $36,208 |	60	| 0.4
+	
 
 ### Data Cleaning Process
 - Converted Date to proper dateline format
@@ -99,8 +104,8 @@ GROUP BY department
 ORDER BY avg_recovery_score DESC;
 ```
 
-### Power BI Dashboard
-Power BI dashboard includes the following visuals:
+### Excel Dashboard
+This dashboard includes the following visuals:
 - 📈 Revenue Performance
 - 📊 Patient's Demographics
 - 🌐 Regional Distribution
